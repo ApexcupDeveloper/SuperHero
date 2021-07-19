@@ -8,17 +8,23 @@ export const searchHeroes = (name) => (dispatch) => {
     http
         .get(`/search/${name}`)
         .then((res) => {
-            console.log('data : ', res.data)
-            // dispatch({
-            //     type: types.SEARCH_HEROES,
-            //     payload: res.data
-            // })
+            if (res.data.response === 'success') {
+                dispatch({
+                    type: types.SEARCH_HEROES,
+                    payload: res.data.results
+                })
+            } else {
+                dispatch({
+                    type: types.GET_ERRORS,
+                    payload: res.data.error
+                });
+            }
+
         })
         .catch((err) => {
-            console.log('error : ', err)
-            // dispatch({
-            //     type: types.GET_ERRORS,
-            //     payload: err
-            // });
+            dispatch({
+                type: types.GET_ERRORS,
+                payload: err.message
+            });
         });
 };

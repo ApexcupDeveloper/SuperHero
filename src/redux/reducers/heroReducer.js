@@ -26,12 +26,13 @@ export default function (state = initialState.heroes, action) {
             return {
                 ...state,
                 errors: action.payload,
+                heroesData: [],
                 loading: false
             };
         case types.CLEAR_ERRORS:
             return {
                 ...state,
-                errors: [],
+                errors: '',
             };
         default:
             return state;

@@ -6,7 +6,7 @@ import AsyncStorage from "redux-persist/lib/storage";
 
 const middleware = [thunk];
 const persistConfig = {
-    key: "root-1",
+    key: "super",
     storage: AsyncStorage,
 };
 

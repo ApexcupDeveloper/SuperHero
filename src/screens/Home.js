@@ -14,7 +14,7 @@ function HomePage() {
       setEmpty(true)
       return
     }
-    history.push(`/search?name=${query}`)
+    history.push(`/search`, { name: query })
   }
 
   const pressKey = (e) => {
@@ -23,7 +23,7 @@ function HomePage() {
       return
     }
     if (e.key === 'Enter') {
-      history.push(`/search?name=${query}`)
+      history.push(`/search`, { name: query })
     }
   }
 

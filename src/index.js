@@ -9,15 +9,13 @@ import { Provider } from 'react-redux';
 import { persistor, store } from './redux/store';
 
 ReactDOM.render(
-  <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <ToastProvider>
+        <ToastProvider autoDismiss={true} autoDismissTimeout={3000}>
           <AppRouter />
         </ToastProvider>
       </PersistGate>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 

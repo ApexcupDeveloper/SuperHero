@@ -17,13 +17,21 @@
 
 .search-page-body {
     padding: 0% 10%;
-    padding-top: 120px;
+    padding-top: 150px;
     background-color: white;
-    height: calc(100vh - 120px);
+    /* height: calc(100vh - 120px); */
     width: 80%;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
+h1 {
+    text-align: left;
+    width: 100%;
+}
 .app-logo-container {
     display: flex;
     align-items: center;
@@ -101,7 +109,7 @@
 }
 
 .header-search-input:hover, .header-search-input:focus {
-    border-color: #394b5e;
+    border-color: #1a73d2;
 }
 
 .search-page-hero-list {
@@ -111,6 +119,38 @@
     column-gap: 20px;
     row-gap: 30px;
     padding-bottom: 200px;
+}
+
+.compare-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 340px;
+    margin-top: 40px;
+}
+
+.compare-hero-img-container {
+    
+}
+
+.compare-hero-img-container > h3 {
+    text-align: center;
+}
+
+.compare-hero-img {
+    height: 100%;
+    object-fit: contain;
+    width: 240px;
+}
+
+.compare {
+
+}
+
+.vs-container {
+    
 }
 
 @media(max-width: 1400px) {
